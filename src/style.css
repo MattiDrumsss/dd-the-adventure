@@ -1,0 +1,24 @@
+*{box-sizing:border-box}
+html,body,#root{margin:0;height:100%;height:100dvh;overscroll-behavior:none;position:fixed;inset:0;width:100%;-webkit-tap-highlight-color:transparent;background:#0b0b1a;color:#e8e6ff;font-family:ui-monospace,Menlo,Consolas,monospace;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none}
+.menu{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:20px;text-align:center;background:radial-gradient(circle at 50% 30%,#2a1a5e 0,#0b0b1a 70%)}
+.menu h1{margin:0;font-size:clamp(40px,10vw,84px);letter-spacing:4px;color:#fff;text-shadow:0 0 24px #7a5cff}
+.menu h1 span{display:block;font-size:.35em;letter-spacing:10px;color:#6fb4ff}
+.motto{margin:0;opacity:.7}
+.cards{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.card{width:210px;padding:16px;border:2px solid #333a6b;background:#12122b;color:inherit;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:8px}
+.card b{color:var(--c);font-size:22px}.card small{opacity:.75}
+.card.sel{border-color:var(--c);box-shadow:0 0 18px var(--c)}
+.play{padding:14px 56px;font:inherit;font-size:22px;letter-spacing:4px;border:2px solid #6fb4ff;background:#1b2a6b;color:#fff;cursor:pointer;box-shadow:0 0 18px #4fa3ff}
+.note{font-size:12px;opacity:.5}
+.stage{position:fixed;inset:0}.canvas{position:absolute;inset:0}
+.hud{position:absolute;top:calc(8px + env(safe-area-inset-top,0px));left:8px;display:flex;gap:10px;align-items:center;background:#0b0b1acc;padding:6px 10px;border:1px solid #333a6b;font-size:13px}
+.hud button{font:inherit;background:#1b2a6b;color:#fff;border:1px solid #6fb4ff;padding:4px 8px;cursor:pointer}
+.help{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font-size:12px;opacity:.7;background:#0b0b1acc;padding:4px 10px}
+
+.joyzone{position:absolute;left:0;top:0;bottom:0;width:55%;touch-action:none}
+.joy{position:absolute;width:130px;height:130px;border-radius:50%;background:#ffffff18;border:2px solid #ffffff55;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.knob{width:56px;height:56px;border-radius:50%;background:#6fb4ffcc;box-shadow:0 0 14px #4fa3ff;pointer-events:none}
+.joyhint{position:absolute;left:16px;bottom:calc(24px + env(safe-area-inset-bottom,0px));font-size:12px;opacity:.55;background:#0b0b1acc;padding:6px 10px;border:1px dashed #ffffff44;pointer-events:none}
+.hud button{min-height:36px;min-width:36px}
+.menu{overflow-y:auto}
+@media (max-width:480px){.card{width:100%}.play{width:100%}.hud span{display:none}}
